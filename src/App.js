@@ -1,25 +1,66 @@
-import logo from './logo.svg';
+
+import React from "react";
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from "./Home";
+import InputField from "./InputField";
+import WebcamCapture from "./webCam";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      {/* <div className='header'>
+        <div className='container'>
+          <a href="https://zolve.com/">
+            <div>
+              <img src="https://zolve.com/static/images/zolve_logo.svg" alt="Zolvo" height="50px" width="50px" />
+            </div>
+          </a>
+          <div className='nav'>
+            <ul className="header-list">
+              <li className='home'>
+                <Link to="/">Home</Link>
+              </li>
+              <li  className='input'>
+                <Link to="/input?q=123">Input Content</Link>
+              </li>
+              <li className='dashboard'>
+                <Link to="/dashboard">Dashboard</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> */}
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home"> <img src="https://zolve.com/static/images/zolve_logo.svg" alt="Zolvo" height="50px" width="50px" /> </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Link to="/">Home</Link>
+            <Link to="/input?q=123">Input Content</Link>
+            <Link to="/webcam-selfie">Webcam-selfie</Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/input">
+          <InputField />
+        </Route>
+        <Route path="/webcam-selfie">
+          <WebcamCapture />
+        </Route>
+      </Switch>
+    </Router>
+  )
 }
-
-export default App;

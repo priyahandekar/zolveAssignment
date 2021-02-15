@@ -2,9 +2,86 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.todate-order-sort{
+  display: flex;
+}
+
+.page-size-fromdate{
+  display: flex;
+}
+
+
+  .header .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #c4c4c4;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container .nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+.home {
+  margin: 20px;
+}
+.input {
+  margin: 20px;
+}
+.dashboard {
+  margin: 20px;
+}
+
+.home:hover {
+  color: red;
+}
+
+.input:hover {
+  color: red;
+}
+
+.dashboard:hover {
+  color: red;
+}
+
+.row1 {
+  padding: 12px;
+}
+
+.row2 {
+  padding: 12px;
+}
+
+.button {
+  padding: 12px;
+}
+
+a {
+  padding: 12px;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  vertical-align: middle;
+}
+
+.input-fields{
+  margin-top: 24px;
+}
+
+.copy-button {
+  margin: 0 12px;
+}
+
+.text-input {
+  margin: 0 0 12px 12px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,7 +92,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 10; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +112,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+.header-list {
+  flex-direction: row;
+  /* margin: 20px; */
 }
