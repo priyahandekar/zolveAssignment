@@ -17,28 +17,6 @@ import Nav from 'react-bootstrap/Nav';
 export default function App() {
   return (
     <Router>
-      {/* <div className='header'>
-        <div className='container'>
-          <a href="https://zolve.com/">
-            <div>
-              <img src="https://zolve.com/static/images/zolve_logo.svg" alt="Zolvo" height="50px" width="50px" />
-            </div>
-          </a>
-          <div className='nav'>
-            <ul className="header-list">
-              <li className='home'>
-                <Link to="/">Home</Link>
-              </li>
-              <li  className='input'>
-                <Link to="/input?q=123">Input Content</Link>
-              </li>
-              <li className='dashboard'>
-                <Link to="/dashboard">Dashboard</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div> */}
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="#home"> <img src="https://zolve.com/static/images/zolve_logo.svg" alt="Zolvo" height="50px" width="50px" /> </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
